@@ -10,7 +10,7 @@ import ContactPage from './pages/ContactPage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
 
 function App() {
-  const [tema, setTema] = useLocalStorage('tema', 'light');
+  const [tema, setTema] = useLocalStorage('tema', 'dark');
 
   const location = useLocation();
 
@@ -27,7 +27,7 @@ function App() {
   };
 
   return (
-    <div className={`min-vh-100 ${tema === 'dark' ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
+    <div className={`min-vh-100 ${tema === 'dark' ? 'bg-black text-light' : 'bg-light text-dark'}`}>
       <div ref={topRef}></div>
 
       <Navbar tema={tema} toggleTema={toggleTema} />

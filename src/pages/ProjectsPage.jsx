@@ -26,7 +26,7 @@ const ProjectsPage = () => {
         setTimeout(() => {
           setProyectos(data);
           setCargando(false);
-        }, 1000);
+        }, 500);
 
       } catch (err) {
         setError(err.message);

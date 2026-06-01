@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 
 const Navbar = ({ tema, toggleTema }) => {
   return (
-    <nav className={`navbar navbar-expand-lg ${tema === 'dark' ? 'navbar-dark bg-dark border-bottom border-secondary' : 'navbar-light bg-light shadow-sm'}`}>
-      <div className="container">
-        {/* Link a Inicio */}
-        <Link className="navbar-brand fw-bold" to="/">Mi Portafolio</Link>
+    <nav className={`navbar navbar-expand-lg ${tema === 'dark' ? 'navbar-dark bg-black border-bottom border-dark' : 'navbar-light bg-light shadow-sm'}`}>
+      <div className="container py-2">
+        {/* Tu nombre como marca, en mayúsculas para mantener la estética */}
+        <Link className="navbar-brand fw-bolder text-uppercase tracking-tight" to="/">
+          Simon Sclarandi
+        </Link>
         
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>
@@ -15,22 +17,22 @@ const Navbar = ({ tema, toggleTema }) => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/about">Sobre mí</Link>
+              <Link className="nav-link text-uppercase fs-6" to="/about">Sobre Mí</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/projects">Proyectos</Link>
+              <Link className="nav-link text-uppercase fs-6" to="/projects">Proyectos</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">Contacto</Link>
+              <Link className="nav-link text-uppercase fs-6" to="/contact">Contacto</Link>
             </li>
           </ul>
           
-          {/* Botón toggle de tema */}
+          {/* Botón toggle de tema redondeado y con colores adaptables */}
           <button 
-            className={`btn ${tema === 'dark' ? 'btn-light' : 'btn-dark'}`} 
+            className={`btn rounded-pill px-4 fw-bold shadow-sm ${tema === 'dark' ? 'btn-outline-info text-light' : 'btn-outline-dark'}`} 
             onClick={toggleTema}
           >
-            {tema === 'dark' ? '☀️ Claro' : '🌙 Oscuro'}
+            {tema === 'dark' ? '☀️ Modo Claro' : '🌙 Modo Oscuro'}
           </button>
         </div>
       </div>
@@ -38,7 +40,7 @@ const Navbar = ({ tema, toggleTema }) => {
   );
 };
 
-// Validación de props como lo pide la consigna
+// Validación obligatoria de props según la rúbrica
 Navbar.propTypes = {
   tema: PropTypes.string.isRequired,
   toggleTema: PropTypes.func.isRequired,
