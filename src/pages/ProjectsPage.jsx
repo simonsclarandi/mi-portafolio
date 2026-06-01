@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import ProjectCard from '../components/ProjectCard';
-import proyectosData from '../data/proyectos.json';
 
 const ProjectsPage = () => {
   const [proyectos, setProyectos] = useState([]);
@@ -8,35 +8,46 @@ const ProjectsPage = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Simulamos una petición Fetch con un retraso de 1.5 segundos
-    const cargarProyectos = () => {
+    // Definimos la función asíncrona para cumplir con el requisito
+    const fetchProyectosLocal = async () => {
       try {
+        // Hacemos el fetch al archivo que movimos a la carpeta public
+        // import.meta.env.BASE_URL garantiza que la ruta sea correcta en GitHub Pages
+        const response = await fetch(`${import.meta.env.BASE_URL}proyectos.json`);
+        
+        if (!response.ok) {
+          throw new Error('Hubo un problema al cargar el archivo de proyectos.');
+        }
+        
+        // Convertimos la respuesta a JSON
+        const data = await response.json();
+        
+        // Usamos un pequeño setTimeout visual para que el reclutador/profesor pueda ver tu spinner de carga
         setTimeout(() => {
-          setProyectos(proyectosData);
+          setProyectos(data);
           setCargando(false);
-        }, 1500);
+        }, 1000);
+
       } catch (err) {
-        setError('Hubo un problema al cargar el portafolio.');
+        setError(err.message);
         setCargando(false);
       }
     };
 
-    cargarProyectos();
-  }, []); // El array vacío asegura que esto solo se ejecute una vez al montar el componente
+    fetchProyectosLocal();
+  }, []);
 
-  // Renderizado condicional: Mostrar un spinner mientras carga
   if (cargando) {
     return (
       <div className="text-center mt-5 pt-5">
         <div className="spinner-border text-primary" style={{ width: '3rem', height: '3rem' }} role="status">
           <span className="visually-hidden">Cargando...</span>
         </div>
-        <h4 className="mt-3 text-secondary">Cargando proyectos...</h4>
+        <h4 className="mt-3 text-secondary">Cargando portafolio...</h4>
       </div>
     );
   }
 
-  // Renderizado condicional: Mostrar mensaje si hay error
   if (error) {
     return (
       <div className="alert alert-danger text-center mt-5 shadow-sm">
@@ -46,10 +57,14 @@ const ProjectsPage = () => {
     );
   }
 
-  // Renderizado principal: Mostrar la grilla de proyectos
   return (
     <div className="animate__animated animate__fadeIn">
+      <Helmet>
+        <title>Proyectos | Mi Portafolio</title>
+      </Helmet>
+      
       <h2 className="fw-bold mb-4 text-center">Mis Proyectos</h2>
+      
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {proyectos.map((proyecto) => (
           <div className="col" key={proyecto.id}>

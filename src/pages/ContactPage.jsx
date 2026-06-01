@@ -1,4 +1,5 @@
 import { useReducer, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 // 1. Definimos el estado inicial
 const initialState = { nombre: '', email: '', mensaje: '' };
@@ -74,6 +75,10 @@ const ContactPage = () => {
 
   return (
     <div className="row justify-content-center animate__animated animate__fadeIn">
+        <Helmet>
+        <title>Inicio | Mi Portafolio SPA</title>
+        <meta name="description" content="Portafolio personal de desarrollador Frontend." />
+      </Helmet>
       <div className="col-12 col-md-8 col-lg-6">
         <h2 className="fw-bold mb-4 text-center">Contactame</h2>
         
