@@ -3,32 +3,36 @@
     "id": 1,
     "nombre": "Links - Punto Apple",
     "descripcion": "Sitio centralizado de enlaces (estilo Linktree) diseñado para dirigir el tráfico de redes sociales a los distintos canales de venta y contacto del negocio.",
-    "imagen": "https://via.placeholder.com/400x200?text=Links+Punto+Apple",
+    "imagen": "/Links-Punto-Apple.png",
     "tecnologias": ["HTML5", "CSS3", "JavaScript"],
-    "repo": "https://github.com/simonsclarandi/links-punto-apple"
+    "repo": "https://github.com/simonsclarandi/links-punto-apple",
+    "link": "https://punto-demo.netlify.app/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnX04Yna7je-B9H8_bjZBPI6Ei8xjoV_siUVCsn-aNNMcJEWaEGtsFoxYTO1U_aem_ZLEY8sb_VfbMUpgW9UqxlQ"
   },
   {
     "id": 2,
     "nombre": "CCD Odontológica",
     "descripcion": "Desarrollo web para Centro Clínico Dental. Portal centrado en la presentación de servicios, información de tratamientos y contacto para pacientes.",
-    "imagen": "https://via.placeholder.com/400x200?text=CCD+Odontologica",
+    "imagen": "/CCD-Odontologica.png",
     "tecnologias": ["React", "Material UI", "Node.js"],
-    "repo": "https://github.com/simonsclarandi/CCD-Odontologica"
+    "repo": "https://github.com/simonsclarandi/CCD-Odontologica",
+    "link": "https://ccd-odontologica.vercel.app/"
   },
   {
     "id": 3,
     "nombre": "Catálogo Base",
     "descripcion": "Plantilla Frontend reutilizable de catálogo de productos. Arquitectura escalable lista para ser integrada con distintos backends o sistemas CMS.",
-    "imagen": "https://via.placeholder.com/400x200?text=Catalogo+Base",
+    "imagen": "/NordicaHome.png",
     "tecnologias": ["React", "Vite", "CSS Modules"],
-    "repo": "https://github.com/simonsclarandi/CatalogoBase"
+    "repo": "https://github.com/simonsclarandi/CatalogoBase",
+    "link": "https://nordica-home.vercel.app/"
   },
   {
     "id": 4,
     "nombre": "Landing Page Base",
     "descripcion": "Plantilla base optimizada para conversiones. Diseño moderno, rápido, accesible y totalmente adaptable a dispositivos móviles (Mobile First).",
-    "imagen": "https://via.placeholder.com/400x200?text=Landing+Base",
+    "imagen": "/Ferre-Bamba.png",
     "tecnologias": ["HTML5", "SASS", "JavaScript"],
-    "repo": "https://github.com/simonsclarandi/LandingBase"
+    "repo": "https://github.com/simonsclarandi/LandingBase",
+    "link": "https://landing-ferre-bamba.vercel.app"
   }
 ]
