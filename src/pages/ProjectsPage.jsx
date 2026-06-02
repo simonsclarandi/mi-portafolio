@@ -65,7 +65,7 @@ const ProjectsPage = () => {
       
       <h2 className="fw-bold mb-4 text-center">Mis Proyectos</h2>
       
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
         {proyectos.map((proyecto) => (
           <div className="col" key={proyecto.id}>
             <ProjectCard 
@@ -73,6 +73,8 @@ const ProjectsPage = () => {
               descripcion={proyecto.descripcion}
               imagen={proyecto.imagen}
               tecnologias={proyecto.tecnologias}
+              repo={proyecto.repo}
+              link={proyecto.link}
             />
           </div>
         ))}
