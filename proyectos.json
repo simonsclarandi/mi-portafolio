@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "nombre": "Links - Punto Apple",
+    "descripcion": "Sitio centralizado de enlaces (estilo Linktree) diseñado para dirigir el tráfico de redes sociales a los distintos canales de venta y contacto del negocio.",
+    "imagen": "https://via.placeholder.com/400x200?text=Links+Punto+Apple",
+    "tecnologias": ["HTML5", "CSS3", "JavaScript"],
+    "repo": "https://github.com/simonsclarandi/links-punto-apple"
+  },
+  {
+    "id": 2,
+    "nombre": "CCD Odontológica",
+    "descripcion": "Desarrollo web para Centro Clínico Dental. Portal centrado en la presentación de servicios, información de tratamientos y contacto para pacientes.",
+    "imagen": "https://via.placeholder.com/400x200?text=CCD+Odontologica",
+    "tecnologias": ["React", "Material UI", "Node.js"],
+    "repo": "https://github.com/simonsclarandi/CCD-Odontologica"
+  },
+  {
+    "id": 3,
+    "nombre": "Catálogo Base",
+    "descripcion": "Plantilla Frontend reutilizable de catálogo de productos. Arquitectura escalable lista para ser integrada con distintos backends o sistemas CMS.",
+    "imagen": "https://via.placeholder.com/400x200?text=Catalogo+Base",
+    "tecnologias": ["React", "Vite", "CSS Modules"],
+    "repo": "https://github.com/simonsclarandi/CatalogoBase"
+  },
+  {
+    "id": 4,
+    "nombre": "Landing Page Base",
+    "descripcion": "Plantilla base optimizada para conversiones. Diseño moderno, rápido, accesible y totalmente adaptable a dispositivos móviles (Mobile First).",
+    "imagen": "https://via.placeholder.com/400x200?text=Landing+Base",
+    "tecnologias": ["HTML5", "SASS", "JavaScript"],
+    "repo": "https://github.com/simonsclarandi/LandingBase"
+  }
+]
