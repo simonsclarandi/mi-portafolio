@@ -3,6 +3,11 @@ import { motion } from 'framer-motion';
 import SkillBadge from './SkillBadge';
 
 const ProjectCard = ({ nombre, descripcion, imagen, tecnologias }) => {
+
+  const rutaImagen = imagen.startsWith('http') 
+    ? imagen 
+    : `${import.meta.env.BASE_URL}${imagen.startsWith('/') ? imagen.slice(1) : imagen}`;
+    
   return (
     <motion.div 
       initial={{ opacity: 0, y: 50 }} 
@@ -12,7 +17,7 @@ const ProjectCard = ({ nombre, descripcion, imagen, tecnologias }) => {
       
       className="card h-100 shadow-sm transition-hover"
     >
-      <img src={imagen} className="card-img-top" alt={`Captura de ${nombre}`} />
+      <img src={rutaImagen} className="card-img-top" alt={`Captura de ${nombre}`} />
       <div className="card-body d-flex flex-column">
         <h5 className="card-title fw-bold">{nombre}</h5>
         <p className="card-text text-secondary flex-grow-1">{descripcion}</p>

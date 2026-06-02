@@ -6,7 +6,7 @@ const HomePage = () => {
     <div 
       className="row align-items-center animate__animated animate__fadeIn m-0 rounded shadow-lg"
       style={{ 
-        minHeight: '85vh', /* Aumentamos ligeramente el alto para dar más respiro */
+        minHeight: '85vh', 
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(${import.meta.env.BASE_URL}escritorio.jpeg)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -18,7 +18,6 @@ const HomePage = () => {
         <meta name="description" content="Portafolio de Simon Sclarandi, Estudiante Analista de Sistemas de Computación y Desarrollador FrontEnd." />
       </Helmet>
       
-      {/* EL CAMBIO ESTÁ AQUÍ: Agregamos mt-5 (Margin Top 5) para forzar que el bloque baje un poco */}
       <div className="col-12 col-md-8 text-start p-5 mt-5">
         
         <h1 className="display-2 fw-bolder text-uppercase mb-0 tracking-tight text-light">
