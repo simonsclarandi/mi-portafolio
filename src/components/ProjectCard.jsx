@@ -5,11 +5,10 @@ import SkillBadge from './SkillBadge';
 const ProjectCard = ({ nombre, descripcion, imagen, tecnologias }) => {
   return (
     <motion.div 
-      // Configuraciones de Framer Motion
       initial={{ opacity: 0, y: 50 }} 
       whileInView={{ opacity: 1, y: 0 }} 
       transition={{ duration: 0.5 }}
-      viewport={{ once: true }} // Hace que la animación ocurra solo la primera vez que se ve
+      viewport={{ once: true }} 
       
       className="card h-100 shadow-sm transition-hover"
     >

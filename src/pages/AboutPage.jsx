@@ -33,7 +33,6 @@ const AboutPage = () => {
         <title>Sobre Mí | Simon Sclarandi</title>
       </Helmet>
 
-      {/* Fila Superior: Texto a la izquierda, Foto a la derecha */}
       <div className="row align-items-center mb-5 pb-4 border-bottom border-dark">
         <div className="col-12 col-md-7 text-start order-2 order-md-1 mt-4 mt-md-0">
           <h2 className="fw-bolder text-uppercase mb-1">Sobre Mí</h2>
@@ -52,21 +51,21 @@ const AboutPage = () => {
               width: '300px', 
               height: '300px', 
               objectFit: 'cover',
-              filter: 'grayscale(30%)' // Un ligero filtro para mantener la estética oscura
+              filter: 'grayscale(30%)'
             }} 
             onError={(e) => { e.target.src = 'https://via.placeholder.com/400x500/121418/38bdf8?text=Tu+Foto' }}
           />
         </div>
       </div>
 
-      {/* Fila Inferior: Habilidades y Experiencia */}
+      {/* Habilidades y Experiencia */}
       <div className="row mt-4">
         <div className="col-md-6 mb-4 pe-md-5">
           <h4 className="text-uppercase fw-bold mb-4 border-bottom border-info pb-2 d-inline-block">Habilidades Técnicas</h4>
           {habilidades.map((hab, index) => (
             <div key={index} className="mb-3">
               <div className="d-flex justify-content-between mb-1">
-                <small className="text-uppercase text-light fw-bold">{hab.nombre}</small>
+                <small className="text-uppercase fw-bold">{hab.nombre}</small>
               </div>
               <div className="progress rounded-pill bg-dark" style={{ height: '6px' }}>
                 <div 
@@ -85,13 +84,13 @@ const AboutPage = () => {
         <div className="col-md-6 mb-4">
           <h4 className="text-uppercase fw-bold mb-4 border-bottom border-info pb-2 d-inline-block">Experiencia y Educación</h4>
           
-          {/* Mapeo de Experiencia */}
+          {/* Experiencia */}
           {experiencia.map((item) => (
             <div key={`exp-${item.id}`} className="mb-4">
               <div className="d-flex align-items-start">
                 <div className="bg-info rounded-circle me-3 mt-1 shadow-sm" style={{ width: '10px', height: '10px' }}></div>
                 <div>
-                  <h6 className="fw-bold mb-0 text-uppercase text-light">{item.puesto}</h6>
+                  <h6 className="fw-bold mb-0 text-uppercase">{item.puesto}</h6>
                   <p className="text-info small mb-1 fw-bold">{item.empresa}</p>
                   <small className="text-secondary">{item.anio}</small>
                   <p className="text-secondary small mt-2">
@@ -102,13 +101,13 @@ const AboutPage = () => {
             </div>
           ))}
 
-          {/* Mapeo de Educación */}
+          {/* Educación */}
           {educacion.map((item) => (
              <div key={`edu-${item.id}`} className="mb-4">
                <div className="d-flex align-items-start">
                  <div className="bg-secondary rounded-circle me-3 mt-1 shadow-sm" style={{ width: '10px', height: '10px' }}></div>
                  <div>
-                   <h6 className="fw-bold mb-0 text-uppercase text-light">{item.titulo}</h6>
+                   <h6 className="fw-bold mb-0 text-uppercase">{item.titulo}</h6>
                    <p className="text-secondary small mb-1 fw-bold">{item.institucion}</p>
                    <small className="text-secondary">{item.anio}</small>
                  </div>

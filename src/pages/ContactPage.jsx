@@ -1,10 +1,8 @@
 import { useReducer, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-// 1. Definimos el estado inicial
 const initialState = { nombre: '', email: '', mensaje: '' };
 
-// 2. Definimos el reducer para manejar los campos
 const formReducer = (state, action) => {
   switch (action.type) {
     case 'ACTUALIZAR_CAMPO':
@@ -17,12 +15,10 @@ const formReducer = (state, action) => {
 };
 
 const ContactPage = () => {
-  // 3. Inicializamos useReducer y estados secundarios
   const [form, dispatch] = useReducer(formReducer, initialState);
   const [errores, setErrores] = useState({});
   const [enviado, setEnviado] = useState(false);
 
-  // 4. Función de validación completa
   const validar = () => {
     let nuevosErrores = {};
     
@@ -41,17 +37,15 @@ const ContactPage = () => {
     }
 
     setErrores(nuevosErrores);
-    // Devuelve true si no hay errores (objeto vacío)
     return Object.keys(nuevosErrores).length === 0;
   };
 
-  // 5. Handlers de eventos
   const handleChange = (e) => {
     dispatch({ type: 'ACTUALIZAR_CAMPO', campo: e.target.name, valor: e.target.value });
   };
 
   const handleBlur = () => {
-    validar(); // Valida al salir del input
+    validar(); 
   };
 
   const handleSubmit = (e) => {
@@ -59,7 +53,6 @@ const ContactPage = () => {
     
     if (validar()) {
       setEnviado(true);
-      // Ocultar mensaje y resetear formulario automáticamente después de 3 segundos
       setTimeout(() => {
         setEnviado(false);
         dispatch({ type: 'RESET' });
@@ -82,7 +75,6 @@ const ContactPage = () => {
       <div className="col-12 col-md-8 col-lg-6">
         <h2 className="fw-bold mb-4 text-center">Contactame</h2>
         
-        {/* Renderizado condicional del mensaje de éxito */}
         {enviado && (
           <div className="alert alert-success text-center shadow-sm">
             ¡Tu mensaje fue enviado con éxito!
@@ -96,7 +88,6 @@ const ContactPage = () => {
               type="text"
               id="nombre"
               name="nombre"
-              /* Template literals dinámicos para clases de validación */
               className={`form-control ${errores.nombre ? 'is-invalid' : form.nombre ? 'is-valid' : ''}`}
               value={form.nombre}
               onChange={handleChange}

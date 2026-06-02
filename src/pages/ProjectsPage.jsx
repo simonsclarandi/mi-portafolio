@@ -8,21 +8,16 @@ const ProjectsPage = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Definimos la función asíncrona para cumplir con el requisito
     const fetchProyectosLocal = async () => {
       try {
-        // Hacemos el fetch al archivo que movimos a la carpeta public
-        // import.meta.env.BASE_URL garantiza que la ruta sea correcta en GitHub Pages
         const response = await fetch(`${import.meta.env.BASE_URL}proyectos.json`);
         
         if (!response.ok) {
           throw new Error('Hubo un problema al cargar el archivo de proyectos.');
         }
         
-        // Convertimos la respuesta a JSON
         const data = await response.json();
-        
-        // Usamos un pequeño setTimeout visual para que el reclutador/profesor pueda ver tu spinner de carga
+
         setTimeout(() => {
           setProyectos(data);
           setCargando(false);

@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 const NotFoundPage = () => {
   return (
     <div className="text-center mt-5 pt-5 animate__animated animate__fadeIn">
-      {/* SEO Dinámico para esta página */}
       <Helmet>
         <title>Página no encontrada | Mi Portafolio</title>
       </Helmet>

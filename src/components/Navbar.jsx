@@ -5,7 +5,6 @@ const Navbar = ({ tema, toggleTema }) => {
   return (
     <nav className={`navbar navbar-expand-lg ${tema === 'dark' ? 'navbar-dark bg-black border-bottom border-dark' : 'navbar-light bg-light shadow-sm'}`}>
       <div className="container py-2">
-        {/* Tu nombre como marca, en mayúsculas para mantener la estética */}
         <Link className="navbar-brand fw-bolder text-uppercase tracking-tight" to="/">
           Simon Sclarandi
         </Link>
@@ -27,7 +26,6 @@ const Navbar = ({ tema, toggleTema }) => {
             </li>
           </ul>
           
-          {/* Botón toggle de tema redondeado y con colores adaptables */}
           <button 
             className={`btn rounded-pill px-4 fw-bold shadow-sm ${tema === 'dark' ? 'btn-outline-info text-light' : 'btn-outline-dark'}`} 
             onClick={toggleTema}

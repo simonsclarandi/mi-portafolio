@@ -46,7 +46,7 @@ const HomePage = () => {
           <a href="https://github.com/simonsclarandi" target="_blank" rel="noreferrer" className="text-light text-decoration-none fs-5 transition-hover">
             GitHub
           </a>
-          <a href="https://linkedin.com/in/tu-linkedin" target="_blank" rel="noreferrer" className="text-light text-decoration-none fs-5 ms-3 transition-hover">
+          <a href="https://www.linkedin.com/in/simon-sclarandi/" target="_blank" rel="noreferrer" className="text-light text-decoration-none fs-5 ms-3 transition-hover">
             LinkedIn
           </a>
         </div>
