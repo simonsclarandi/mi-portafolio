@@ -38,7 +38,7 @@ const ProjectsPage = () => {
         <div className="spinner-border text-primary" style={{ width: '3rem', height: '3rem' }} role="status">
           <span className="visually-hidden">Cargando...</span>
         </div>
-        <h4 className="mt-3 text-secondary">Cargando portafolio...</h4>
+        <h4 className="mt-3 text-secondary">Cargando portfolio...</h4>
       </div>
     );
   }
@@ -55,7 +55,7 @@ const ProjectsPage = () => {
   return (
     <div className="animate__animated animate__fadeIn">
       <Helmet>
-        <title>Proyectos | Mi Portafolio</title>
+        <title>Proyectos | Mi Portfolio</title>
       </Helmet>
       
       <h2 className="fw-bold mb-4 text-center">Mis Proyectos</h2>

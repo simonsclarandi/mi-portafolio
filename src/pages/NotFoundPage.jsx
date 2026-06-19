@@ -5,7 +5,7 @@ const NotFoundPage = () => {
   return (
     <div className="text-center mt-5 pt-5 animate__animated animate__fadeIn">
       <Helmet>
-        <title>Página no encontrada | Mi Portafolio</title>
+        <title>Página no encontrada | Mi Portfolio</title>
       </Helmet>
 
       <h1 className="display-1 fw-bold text-primary">404</h1>

@@ -15,7 +15,7 @@ const HomePage = () => {
     >
       <Helmet>
         <title>Inicio | Simon Sclarandi</title>
-        <meta name="description" content="Portafolio de Simon Sclarandi, Estudiante Analista de Sistemas de Computación y Desarrollador FrontEnd." />
+        <meta name="description" content="Portfolio de Simon Sclarandi, Estudiante Analista de Sistemas de Computación y Desarrollador FrontEnd." />
       </Helmet>
       
       <div className="col-12 col-md-8 text-start p-5 mt-5">
@@ -35,7 +35,7 @@ const HomePage = () => {
             Sobre Mí
           </Link>
           <Link to="/projects" className="btn btn-outline-info rounded-pill px-4 py-2 text-uppercase fw-bold">
-            Portafolio
+            Portfolio
           </Link>
         </div>
 
