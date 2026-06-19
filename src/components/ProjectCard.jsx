@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import SkillBadge from './SkillBadge';
 
-const ProjectCard = ({ nombre, descripcion, imagen, tecnologias }) => {
+const ProjectCard = ({ nombre, descripcion, imagen, tecnologias, link, repo }) => {
 
   const rutaImagen = imagen.startsWith('http') 
     ? imagen 
@@ -21,7 +21,16 @@ const ProjectCard = ({ nombre, descripcion, imagen, tecnologias }) => {
       <div className="card-body d-flex flex-column">
         <h5 className="card-title fw-bold">{nombre}</h5>
         <p className="card-text text-secondary flex-grow-1">{descripcion}</p>
-        
+        {link && (
+          <a href={link} className="btn btn-primary mt-3" target="_blank" rel="noopener noreferrer">
+            Ver Proyecto
+          </a>
+        )}
+        {repo && (
+          <a href={repo} className="btn btn-outline-secondary mt-3" target="_blank" rel="noopener noreferrer">
+            Ver Repositorio
+          </a>
+        )}
         <div className="mt-3">
           {tecnologias.map((tech, index) => (
             <SkillBadge key={index} nombre={tech} />
@@ -37,6 +46,8 @@ ProjectCard.propTypes = {
   descripcion: PropTypes.string.isRequired,
   imagen: PropTypes.string.isRequired,
   tecnologias: PropTypes.arrayOf(PropTypes.string).isRequired,
+  link: PropTypes.string,
+  repo: PropTypes.string,
 };
 
 export default ProjectCard;

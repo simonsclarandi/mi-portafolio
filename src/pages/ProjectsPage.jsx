@@ -59,9 +59,18 @@ const ProjectsPage = () => {
       </Helmet>
       
       <h2 className="fw-bold mb-4 text-center">Mis Proyectos</h2>
+
+      {/* Primera tarjeta sola */}
+      {proyectos.length > 0 && (
+        <div className="row mb-4">
+          <div className="col-12">
+            <ProjectCard {...proyectos[4]} />
+          </div>
+        </div>
+      )}
       
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
-        {proyectos.map((proyecto) => (
+        {proyectos.map((proyecto, index) => index < 4 && (
           <div className="col" key={proyecto.id}>
             <ProjectCard 
               nombre={proyecto.nombre}

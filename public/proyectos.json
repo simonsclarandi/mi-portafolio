@@ -34,5 +34,14 @@
     "tecnologias": ["HTML5", "SASS", "JavaScript"],
     "repo": "https://github.com/simonsclarandi/LandingBase",
     "link": "https://landing-ferre-bamba.vercel.app"
+  },
+  {
+    "id": 5,
+    "nombre": "Sistema de Gestion - ERP",
+    "descripcion": "Sistema de gestión integral para la administración de operaciones empresariales. usuario:demo contraseña:123",
+    "imagen": "SistemaERP.png",
+    "tecnologias": ["MVC", "C#", "SQL Server"],
+    "repo": "https://github.com/simonsclarandi/PuntoApple.git",
+    "link": "http://sclarandi-demo.runasp.net"
   }
 ]
